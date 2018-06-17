@@ -210,3 +210,14 @@ int rm_b_node (struct b_node *father, struct b_node *node, void (*deal_with)(str
         (*deal_with)(father, choosed_son, node);
       }
 }
+
+struct b_node *getSon (struct b_node *node, son s)
+{
+  if (node == NULL)
+    return NULL;
+  
+  if (s == left)
+     return node->left_son;
+  else
+    return node->right_son;
+}

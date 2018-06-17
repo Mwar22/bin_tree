@@ -12,11 +12,19 @@ struct b_node
   struct b_node *right_son;
 };
 
-typedef enum {preorder, inorder, posorder} order;
+typedef enum {left, right} son;
 
 
 
-
+/*  Name: getSon.
+ *  Description: obtem o filho de um nó.
+ *  Parameters:
+ *    node: Nó alvo
+ *    s: enum do tipo "son" que especifica qual filho escolher.
+ *      
+ *  Return: ponteiro para o nó filho escolhido.
+ */
+struct b_node *getSon (struct b_node *node, son s);
 
 struct b_node *new_b_node (void *data);
 

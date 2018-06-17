@@ -95,11 +95,16 @@ int main (int argc, char *argv[])
   printf (">>Ok. Feito.\n\n");
   
   printf ("Excluindo o filho direito no nó raiz da arvore\n");
-  struct b_node *ls = tree->right_son;
+  struct b_node *rs = tree->right_son;
   in_order (tree, print_node);
-  rm_b_node (tree, ls, &deal_with);
+  rm_b_node (tree, rs, &deal_with);
   printf("\nDepois de excluído\n");
   in_order (tree, print_node);
+  printf ("\n>>Ok. Feito.\n\n");
+  
+  printf ("Obtendo o filho esquerdo da arvore\n");
+  struct b_node *ls = getSon(tree, left);
+  print_node (ls);
   printf ("\n>>Ok. Feito.\n\n");
   
   
